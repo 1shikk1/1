@@ -9,17 +9,20 @@ body{
     background-size: cover;
 }
 header{
-    width: 70vw;
-    height: 120px;
-    background: green;
+    width: 1200px;
+    height: 200px;
     margin: auto;
+    background: green;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: calc(((100vw - 1200px)/2) - 8px);
 }
 header .izq,
 header .der{
     width: 10%;
-    background: black;
+    background: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
 }
@@ -41,12 +44,16 @@ header .cen img{
     width: 60%;
 }
 .menu{
-    width: 70vw;
+    width: 1200px;
     height: 24px;
     background: rgb(0, 0, 0);
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    left: calc(((100vw - 1200px)/2) - 8px);
+    top: 200px;
 }
 nav a{
     color: white;
@@ -61,33 +68,60 @@ nav a:hover{
     background: blue;
 }
 main{
-    width: 70vw;
+    width: 1200px;
+    height: 60vh;
     margin: auto;
     background: rgba(0, 0, 0, .8);
     color:white;
+    position: relative;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
+    justify-content: center;
+    align-items: center;
+    top: 224px;
+    left: 0;
+    z-index: -1;
+    border: 1px solid rgb(255, 255, 255);
+}
+.dos{
+    width: 1200px;
+    height: 40vh;
+    margin: auto;
+    background: rgba(0, 0, 0, .8);
+    color:white;
+    position: relative;
+    top: 220px;
+    left: 0;
+    z-index: -1;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+}
+.tres{
+    width: 1200px;
+    height: 40vh;
+    margin: auto;
+    background: rgba(0, 0, 0, .8);
+    color:white;
+    position:relative;
+    top: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 main .lateral img{
-    max-width: 90%;
-    
+    width: 100%;
+    cursor: pointer; /* Establece el cursor como un puntero al pasar el mouse sobre el enlace de la imagen */
+    display: inline-block;
 }
 main .lateral{
-    width: 40%;
+    flex-basis: 25%;
+    width: 70%;
     text-align: center;
     display: flex;
-    justify-content: left;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 0px;
     margin-right: 0px;
     float: left;
-
-}
-.lateral-img {
-    flex-basis: 20%;
 
 }
 main .contenido{
@@ -98,18 +132,24 @@ main .contenido{
     margin-bottom: 10px;
     float: right;
     font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    
     
 }
 .contenido-txt {
-    flex-basis: 60%;
+    flex-basis: 70%;
 
+}
+p{
+    font-size: 15px;
 }
 main .contenido h2{
     width: 10%;
     text-align: left;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: large;
+    font-size: 25px;
 
 }
 
@@ -121,11 +161,26 @@ main .contenido h2{
     clear: both;
     display: flex;
     flex-wrap: wrap;
+
+    scroll-margin-top: 310px;
   }
   .container {
-    max-width: 70vw;
+    max-width: 75vw;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
+.dos div a{
+    width: 5%;
+    position: absolute;
+    top: 14%;
+    right: 91%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
